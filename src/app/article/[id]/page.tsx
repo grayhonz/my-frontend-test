@@ -44,7 +44,8 @@ const ArticleByIdPage = () => {
           <Image
             src="/background-article.jpg"
             alt="Header Background"
-            fill
+            width={600} 
+            height={400}
             style={{ objectFit: "cover" }}
             className="opacity-40"
           />

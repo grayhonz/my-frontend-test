@@ -8,7 +8,6 @@ interface ArticleDetailProps {
     description: string;
     imageUrl: string;
     date: string;
-    content: string;
     categories: string[];
   };
 }
@@ -41,7 +40,7 @@ const ArticleDetail = ({ article }: ArticleDetailProps) => {
           {/* Konten Artikel */}
           <div
             className="prose prose-sm max-w-none dark:prose-invert"
-            dangerouslySetInnerHTML={{ __html: article.content }}
+            dangerouslySetInnerHTML={{ __html: article.description }}
           />
         </div>
       </div>

@@ -17,7 +17,7 @@ const ArticleRow = ({ article }: ArticleRowProps) => {
   return (
     <tr className="border-b border-gray-200">
       <td className="py-2 px-4">
-        <Image src={article.thumbnail} alt={article.title} className="w-16 h-16 rounded" />
+        <Image src={article.thumbnail} width={600} height={400} alt={article.title} className="w-16 h-16 rounded" />
       </td>
       <td className="py-2 px-4">
         <span>{article.title}</span>

@@ -8,7 +8,6 @@ export interface Article {
   description: string;
   imageUrl: string;
   date: string;
-  content: string; // Konten lengkap artikel
   categories: string[];
 }
 

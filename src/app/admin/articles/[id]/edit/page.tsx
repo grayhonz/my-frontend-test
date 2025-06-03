@@ -13,7 +13,7 @@ import useArticleById from "../../hooks/useArticleById";
 const schema = z.object({
   title: z.string().min(3, "Judul minimal 3 karakter"),
   category: z.string().min(1, "Kategori wajib dipilih"),
-  content: z.string().min(10, "Konten minimal 10 karakter"),
+  description: z.string().min(10, "Konten minimal 10 karakter"),
   thumbnail: z.string().optional(),
 });
 
@@ -41,7 +41,7 @@ const EditArticlePage = () => {
       reset({
         title: article.title,
         category: article.categories[0] || "",
-        content: article.content,
+        description: article.description,
         thumbnail: article.imageUrl,
       });
       setThumbnailPreview(article.imageUrl);
@@ -147,11 +147,11 @@ const EditArticlePage = () => {
               <textarea
                 rows={10}
                 className={`w-full px-3 py-2 border text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                  errors.content ? "border-red-500" : "border-gray-300"
+                  errors.description ? "border-red-500" : "border-gray-300"
                 }`}
-                {...register("content")}
+                {...register("description")}
               />
-              {errors.content && <p className="text-sm text-red-500 mt-1">{errors.content.message}</p>}
+              {errors.description && <p className="text-sm text-red-500 mt-1">{errors.description.message}</p>}
             </div>
 
             {/* Buttons */}

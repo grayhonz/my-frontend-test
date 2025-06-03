@@ -9,7 +9,6 @@ interface ArticleDetailProps {
     description: string;
     imageUrl: string;
     date: string;
-    content: string;
     categories: string[];
   };
 }
@@ -34,7 +33,7 @@ const ArticleDetail = ({ article }: ArticleDetailProps) => {
         className="w-full h-96 object-cover mb-4"
       />
       {/* Konten Artikel */}
-      <div className="mb-4" dangerouslySetInnerHTML={{ __html: article.content }} />
+      <div className="mb-4" dangerouslySetInnerHTML={{ __html: article.description }} />
       {/* Kategori */}
       <div className="flex space-x-2 mt-2">
         {article.categories.map((category) => (

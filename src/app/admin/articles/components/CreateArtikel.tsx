@@ -9,7 +9,7 @@ import Image from "next/image";
 const schema = z.object({
   title: z.string().min(3, "Judul minimal 3 karakter"),
   category: z.string().min(1, "Kategori wajib dipilih"),
-  content: z.string().min(10, "Konten minimal 10 karakter"),
+  description: z.string().min(10, "Konten minimal 10 karakter"),
   thumbnail: z.any().optional(), // Jangan pakai string karena kita pakai File di input
 });
 
@@ -127,12 +127,12 @@ const CreateArticle: React.FC = () => {
           rows={10}
           placeholder="Tulis konten artikel..."
           className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-            errors.content ? "border-red-500" : "border-gray-300"
+            errors.description ? "border-red-500" : "border-gray-300"
           }`}
-          {...register("content")}
+          {...register("description")}
         ></textarea>
-        {errors.content && (
-          <p className="mt-1 text-sm text-red-500">{errors.content.message}</p>
+        {errors.description && (
+          <p className="mt-1 text-sm text-red-500">{errors.description.message}</p>
         )}
       </div>
 

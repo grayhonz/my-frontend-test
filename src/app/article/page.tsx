@@ -80,6 +80,8 @@ const ArticleListPage = () => {
               alt="Header Background"
               layout="fill"
               objectFit="cover"
+              width={600} 
+              height={400}
               className="opacity-40"
             />
           </div>

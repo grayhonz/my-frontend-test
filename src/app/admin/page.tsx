@@ -1,4 +1,4 @@
-// src/app/admin/layout.tsx
+// src/app/admin/page.tsx
 "use client";
 
 import React from "react";
@@ -6,7 +6,7 @@ import Sidebar from "./components/sidebar";
 import UserMenu from "./components/UserMenu";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-const AdminLayout = ({ children }: { children: React.ReactNode }) => {
+const AdminPage = () => {
   const router = useRouter();
 
   // Simulasi data pengguna yang sudah login
@@ -40,11 +40,9 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
             <UserMenu user={user} onLogout={handleLogout} />
           </div>
         </header>
-
-        {children}
       </div>
     </div>
   );
 };
 
-export default AdminLayout;
+export default AdminPage;

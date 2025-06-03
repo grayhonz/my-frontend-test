@@ -44,6 +44,8 @@ const RelatedArticles = ({ excludeId }: RelatedArticlesProps) => {
               <Image 
                 src={article.imageUrl} 
                 alt={article.title} 
+                width={600} 
+                height={400}
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-200"
               />
             </div>
