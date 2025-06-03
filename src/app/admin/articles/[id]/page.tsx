@@ -4,7 +4,7 @@ import React from "react";
 import { useParams } from "next/navigation";
 import useArticleById from "../hooks/useArticleById";
 import ArticleDetail from "../components/ArticleDetail";
-import RelatedArticles from "../components/RelatedArticle";
+import RelatedArticles from "../components/RelatedArticles";
 import UserMenu from "../../../article/components/UserMenu";
 import Image from "next/image";
 
