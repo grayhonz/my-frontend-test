@@ -1,4 +1,4 @@
-// src/app/article/components/ArticleDetail.tsx
+// src/app/article/components/ArticleDetail.tsx edit nama article detail
 import Image from "next/image";
 
 interface ArticleDetailProps {

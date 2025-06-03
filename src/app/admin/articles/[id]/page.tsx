@@ -3,8 +3,8 @@
 import React from "react";
 import { useParams } from "next/navigation";
 import useArticleById from "../hooks/useArticleById";
-import ArticleDetail from "../components/articleDetail";
-import RelatedArticles from "../components/relatedArticle";
+import ArticleDetail from "../components/ArticleDetail";
+import RelatedArticles from "../components/RelatedArticle";
 import UserMenu from "../../../article/components/UserMenu";
 import Image from "next/image";
 

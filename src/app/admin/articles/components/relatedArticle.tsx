@@ -1,4 +1,4 @@
-// src/app/article/components/RelatedArticles.tsx
+// src/app/article/components/RelatedArticles.tsx edit nama
 // import ArticleCard from "./ArticleCard";
 import Image from "next/image";
 import useArticles from "../hooks/useArticles";
