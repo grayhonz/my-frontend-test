@@ -1,6 +1,7 @@
 // src/app/admin/articles/components/ArticleRow.tsx
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ArticleRowProps {
   article: {
@@ -16,7 +17,7 @@ const ArticleRow = ({ article }: ArticleRowProps) => {
   return (
     <tr className="border-b border-gray-200">
       <td className="py-2 px-4">
-        <img src={article.thumbnail} alt={article.title} className="w-16 h-16 rounded" />
+        <Image src={article.thumbnail} alt={article.title} className="w-16 h-16 rounded" />
       </td>
       <td className="py-2 px-4">
         <span>{article.title}</span>

@@ -10,6 +10,7 @@ import Sidebar from "../components/sidebar";
 import UserMenu from "../components/UserMenu";
 import LogoutModal from "./components/LogoutModal";
 import DeleteModal from "./components/DeleteModal";
+import Image from "next/image";
 
 const AdminArticlesPage = () => {
   const [query, setQuery] = useState("");
@@ -106,7 +107,7 @@ const AdminArticlesPage = () => {
               {articles.map((article) => (
                 <tr key={article.id} className="bg-white border-b hover:bg-gray-100">
                   <td className="py-2 px-4">
-                    <img src={article.imageUrl} alt="Thumbnail" className="w-24 h-auto rounded" />
+                    <Image src={article.imageUrl} alt="Thumbnail" className="w-24 h-auto rounded" />
                   </td>
                   <td className="py-2 px-4 text-black">{article.title}</td>
                   <td className="py-2 px-4 text-black">{article.categories.join(", ")}</td>

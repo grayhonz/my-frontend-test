@@ -1,5 +1,6 @@
 // src/app/article/components/RelatedArticles.tsx
 // import ArticleCard from "./ArticleCard";
+import Image from "next/image";
 import useArticles from "../hooks/useArticles";
 
 interface RelatedArticlesProps {
@@ -40,7 +41,7 @@ const RelatedArticles = ({ excludeId }: RelatedArticlesProps) => {
             className="bg-white rounded-lg shadow-sm overflow-hidden group hover:shadow-md transition-shadow duration-200"
           >
             <div className="relative h-48">
-              <img 
+              <Image 
                 src={article.imageUrl} 
                 alt={article.title} 
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-200"
