@@ -13,16 +13,16 @@ const Sidebar = () => {
   return (
     <aside className="w-56 bg-[#2F62F0] text-white flex flex-col p-6 min-h-screen">
       {/* Logo */}
-      <div className="flex items-center space-x-2 mb-8 select-none">
-        <Image
-          src="/"
-          alt="Logo icon white hexagonal shape"
-          width={24}
-          height={24}
-          className="w-6 h-6"
-        />
-        <span className="font-semibold text-lg">Logoipsum</span>
-      </div>
+        <div className="mb-8 select-none">
+          <Image
+            src="/frame-auth-white.png"
+            alt="Logo icon"
+            width={180}
+            height={60}
+            className="w-auto h-9" // sesuaikan tinggi, lebar otomatis
+          />
+        </div>
+
 
       {/* Navigation */}
       <nav className="flex flex-col space-y-3 text-sm font-medium">
