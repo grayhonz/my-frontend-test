@@ -25,6 +25,7 @@ const EditArticlePage = () => {
   const id = params.id as string;
   const { article, loading, error } = useArticleById(id);
   const [thumbnailPreview, setThumbnailPreview] = useState<string | null>(null);
+  const [availableCategories, setAvailableCategories] = useState<string[]>([]); // untuk select categories lebih dinamis
 
   const {
     register,
@@ -64,6 +65,21 @@ const EditArticlePage = () => {
       reader.readAsDataURL(file);
     }
   };
+  //untuk select dinamis
+  useEffect(() => {
+    if (article) {
+      reset({
+        title: article.title,
+        category: article.categories[0] || "",
+        description: article.description,
+        thumbnail: article.imageUrl,
+      });
+      setThumbnailPreview(article.imageUrl);
+      
+      // Set daftar kategori yang tersedia
+      setAvailableCategories(article.categories);
+    }
+  }, [article, reset]);
 
   if (loading) return <div className="p-4">Loading...</div>;
   if (error || !article) return <div className="p-4 text-red-500">Artikel tidak ditemukan</div>;
@@ -134,9 +150,11 @@ const EditArticlePage = () => {
                 {...register("category")}
               >
                 <option value="">Pilih kategori</option>
-                <option value="technology">Technology</option>
-                <option value="business">Business</option>
-                <option value="lifestyle">Lifestyle</option>
+                {availableCategories.map((cat) => (
+                  <option key={cat} value={cat}>
+                    {cat}
+                  </option>
+                ))}
               </select>
               {errors.category && <p className="text-sm text-red-500 mt-1">{errors.category.message}</p>}
             </div>
