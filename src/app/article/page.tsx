@@ -80,8 +80,6 @@ const ArticleListPage = () => {
               alt="Header Background"
               layout="fill"
               objectFit="cover"
-              width={600} 
-              height={400}
               className="opacity-40"
             />
           </div>
@@ -90,23 +88,30 @@ const ArticleListPage = () => {
           <div className="relative z-10 w-full">
             {/* Logo */}
             <div className="flex justify-start px-6 pt-4">
-              <a href="#" className="block w-12 h-12 bg-white rounded-full shadow-md" />
+              <Image
+                src="/frame-auth-white.png"
+                alt="frame-auth"
+              width={110}
+              height={11}
+                objectFit="cover"
+                className=""
+              />
             </div>
 
             {/* Judul dan UserMenu */}
             <div className="container mx-auto px-6 py-6 flex flex-col items-center justify-center text-center">
-              <h5 className="text-3xl md:text-1l font-bold leading-tight">
+              <h5 className="text-3xl mt-10 mb-10 md:text-1l font-bold leading-tight">
                 Blog Genzet
               </h5>
-              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-3xl mb-3 md:text-5xl font-bold leading-tight">
                 The Journal : Design Resources, <br></br>Interviews, and Industry News
               </h1>
-              <p className="text-lg md:text-xl mt-2 max-w-2xl">
+              <p className="text-lg mb-8 md:text-xl mt-2 max-w-2xl">
                 Your daily dose of design insights!
               </p>
 
               {/* Filter + Search */}
-              <div className="bg-blue-700 p-2 rounded-md">
+              <div className="bg-blue-700 mb-2 p-2 rounded-md">
                 <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
                   <CategoryFilter onFilterChange={handleCategoryChange} />
                   <SearchInput onSearch={handleSearch} />
