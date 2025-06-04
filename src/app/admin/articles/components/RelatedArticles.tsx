@@ -53,7 +53,7 @@ const RelatedArticles = ({ excludeId }: RelatedArticlesProps) => {
               <p className="text-xs text-[#64748B] mb-1">
                 {new Date(article.date).toLocaleDateString()}
               </p>
-              <h3 className="text-base font-semibold mb-2">
+              <h3 className="text-base text-black font-semibold mb-2">
                 {article.title}
               </h3>
               <div className="flex flex-wrap gap-2">
