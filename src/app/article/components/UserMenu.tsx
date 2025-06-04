@@ -19,7 +19,7 @@ const UserMenu = ({ user, onLogout }: UserMenuProps) => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 text-white hover:text-blue-300 focus:outline-none"
+        className="flex items-center space-x-2 hover:text-blue-300 focus:outline-none"
       >
         <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-bold">
           {user?.initial}
