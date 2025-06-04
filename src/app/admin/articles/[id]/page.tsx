@@ -50,7 +50,9 @@ const ArticleByIdPage = () => {
               className="object-contain"
             />
           </div>
-          <UserMenu user={{ name: "James Dean", initial: "J" }} onLogout={() => {}} />
+          <div className="text-black">
+            <UserMenu user={{ name: "James Dean", initial: "J" }} onLogout={() => {}} />
+          </div>
         </div>
       </header>
 
