@@ -90,7 +90,6 @@ const useCategories = ({ query = "", page = 1 }: UseCategoriesProps) => {
           if (isMounted) {
             setCategories(response.data.categories);
             applyFiltersAndPagination(response.data.categories);
-            setTotalPages(response.data.totalPages);
           }
         }
       } catch (err) {
@@ -118,7 +117,7 @@ const useCategories = ({ query = "", page = 1 }: UseCategoriesProps) => {
 
   return {
     categories: filteredCategories,
-    totalCategories: categories.length,
+    totalCategories: query ? filteredCategories.length : categories.length, // perbaikan di sini
     totalPages,
     loading,
     error,
