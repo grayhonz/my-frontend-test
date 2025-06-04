@@ -39,39 +39,34 @@ const ArticleByIdPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Header */}
-      <header className="relative bg-blue-600 text-white">
-        <div className="absolute inset-0">
-          <Image
-            src="/background-article.jpg"
-            alt="Header Background"
-            width={600} 
-            height={400}
-            style={{ objectFit: "cover" }}
-            className="opacity-40"
-          />
-        </div>
-        <div className="relative z-10 p-6 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-center md:text-left max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              The Journal
-            </h1>
-            <p className="text-lg md:text-xl mt-2">
-              Design Resources, Interviews, and Industry News
-            </p>
+      <header className="bg-white border-b border-gray-200 shadow-sm">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="flex items-center space-x-2">
+            <Image
+              src="/frame-auth.png"
+              alt="Logo"
+              width={100}
+              height={30}
+              className="object-contain"
+            />
           </div>
-          <UserMenu user={{ name: "James Dean", initial: "J" }} onLogout={() => {}} />
+          <div className="text-black">
+            <UserMenu user={{ name: "James Dean", initial: "J" }} onLogout={() => {}} />
+          </div>
         </div>
       </header>
+
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
-        {/* Article Detail */}
         <ArticleDetail article={article} />
-        {/* Related Articles */}
         <RelatedArticles excludeId={article.id} />
       </main>
+
       {/* Footer */}
-      <footer className="bg-blue-700 text-white p-6 text-center">
-        <p className="text-sm">© 2025 Blog genzet. All rights reserved.</p>
+      <footer className="bg-blue-700 text-white p-6 mt-8">
+        <div className="container mx-auto text-center text-sm">
+          <p>© 2025 Blog genzet. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
